@@ -2094,9 +2094,9 @@ def rhs_spherical(
     r, phi, v_r, v_phi = y
     mu, mu_r, mu_phi = n_and_grad_rphi(phi, r)
 
-    mu = float(mu)
-    mu_r = float(mu_r)
-    mu_phi = float(mu_phi)
+    mu = float(np.ravel(mu)[0])
+    mu_r = float(np.ravel(mu_r)[0])
+    mu_phi = float(np.ravel(mu_phi)[0])
 
     # Invalid or non-physical μ → terminate derivative
     if not np.isfinite(mu) or mu <= 0.0:
