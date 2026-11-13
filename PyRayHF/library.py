@@ -2663,7 +2663,8 @@ def generate_input_1D(year, month, day, UT, tlat,
         coeff_dir=coeff_dir,
         foF2_coeff=foF2_coeff,
         hmF2_model=hmF2_model,
-        coord=coord)
+        coord=coord,
+        old_output=True)
 
     # Remove extra dimensions
     den = np.squeeze(den)
